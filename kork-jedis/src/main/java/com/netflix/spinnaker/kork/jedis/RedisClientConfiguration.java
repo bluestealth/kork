@@ -226,6 +226,7 @@ public class RedisClientConfiguration {
         config.getTimeoutMs(),
         config.getTimeoutMs(),
         config.getMaxAttempts(),
+        cxp.username(),
         cxp.password(),
         null,
         objectPoolConfig,

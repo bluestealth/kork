@@ -10,6 +10,7 @@ ext {
     bouncycastle     : "1.61",
     brave            : "5.12.3",
     groovy           : "2.5.11", //this needs to keep in sync with the version from boot... if we could get rid of groovy-all we'd no longer need this
+    jedis            : "3.3.0",
     jsch             : "0.1.54",
     jschAgentProxy   : "0.0.9",
     protobuf         : "3.9.1",
@@ -92,6 +93,7 @@ dependencies {
     api("com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0")
     api("com.nhaarman:mockito-kotlin:1.6.0")
     api("com.ninja-squad:springmockk:2.0.3")
+    api("redis.clients:jedis:${versions.jedis}")
     api("com.squareup.okhttp3:logging-interceptor:${versions.okhttp3}")
     api("com.squareup.okhttp3:mockwebserver:${versions.okhttp3}")
     api("com.squareup.okhttp3:okhttp-sse:${versions.okhttp3}")

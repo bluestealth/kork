@@ -29,6 +29,18 @@ public class RedisClientConnectionProperties {
     return this.connection.getScheme().equals("rediss");
   }
 
+  public String username() {
+    if (this.connection.getUserInfo() == null) {
+      return null;
+    }
+    String username = this.connection.getUserInfo().split(":", 2)[0];
+    /** Fallback to Redis non-ACL authentication */
+    if (username.equals("") || username.equals("default")) {
+      return null;
+    }
+    return username;
+  }
+
   public String password() {
     if (this.connection.getUserInfo() == null || !this.connection.getUserInfo().contains(":")) {
       return null;

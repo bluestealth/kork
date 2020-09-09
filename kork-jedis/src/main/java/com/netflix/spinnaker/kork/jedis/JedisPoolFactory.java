@@ -58,6 +58,7 @@ public class JedisPoolFactory {
             cxp.addr(),
             cxp.port(),
             properties.timeoutMs,
+            cxp.username(),
             cxp.password(),
             cxp.database(),
             null,
